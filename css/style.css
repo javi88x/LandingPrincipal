@@ -416,8 +416,9 @@ Request form
 
 .request-form h3{
 	color:#2f2f2f;
-	font-size:36px;
+	font-size:34px;
 	line-height:46px;
+	text-align: center;
 }
 
 .request-form h3 strong{
@@ -1273,6 +1274,9 @@ label.info-contacto a{
 	line-height: .9em;
 	font-weight: 900;
 }
+.descrip-universidad{
+	font-size: 18px;
+}
 
     .google-maps {
         position: relative;
@@ -1287,3 +1291,24 @@ label.info-contacto a{
         width: 100% !important;
         height: 60% !important;
     }
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+	.logo{
+		display: block;
+		text-align: center;
+	}
+	.contact-detail{
+		text-align: center;
+	}
+	.heading{
+		text-align: center;
+	}
+	h4{
+		font-size: 20px;
+	}
+	.scrolltop h3{
+		font-size: 50px;
+		line-height: 50px;
+		text-align: center;
+	}
+ }

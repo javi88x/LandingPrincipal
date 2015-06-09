@@ -1,20 +1,34 @@
-<?php 
-if(isset($_POST['submit'])){
-    $to1 = "handres@degrisdigital.com"; // this is your Email address
-    $to2 = "uninpahu@uninpahu.edu.co";
-    $from = $_POST['email']; // this is the sender's Email address
-    $nombre = $_POST['nombre'];
-    $telefono = $_POST['telefono'];
-    $carreras = $_POST['carreras'];
-    $subject = "Información formulario contacto Landing";
-    $message = "Nombre: ".$nombre . " Telefono: " . $telefono . " Programa de interes:" . $carreras . "\n\n" . $_POST['message'];
-    $message2 = "Copia información formulario contacto Landing" . $nombre . "\n\n" . $_POST['message'];
+<?php
+if(isset($_POST['email'])) {
 
-    $headers = "From:" . $to1;
-    $headers2 = "From:" . $to2;
-    mail($to1,$subject,$message,$headers);
-    mail($to2,$subject,$message2,$headers2); // sends a copy of the message to the sender
-    ('Location: ./gracias.html');
-    }
+// Debes editar las próximas dos líneas de código de acuerdo con tus preferencias
+$email_to = "handres@degrisdigital.com";
+$email_subject = "Información formulario contacto Landing";
+
+// Aquí se deberían validar los datos ingresados por el usuario
+if(!isset($_POST['nombre']) ||
+!isset($_POST['telefono']) ||
+!isset($_POST['email']) ||
+!isset($_POST['carreras'])){
+
+echo "<b>Ocurrió un error y el formulario no ha sido enviado. </b><br />";
+echo "Por favor, vuelva atrás y verifique la información ingresada<br />";
+die();
+}
+
+$email_message = "Detalles del formulario de contacto:\n\n";
+$email_message .= "Nombre: " . $_POST['nombre'] . "\n";
+$email_message .= "E-mail: " . $_POST['email'] . "\n";
+$email_message .= "Teléfono: " . $_POST['telefono'] . "\n";
+$email_message .= "Carrera de interes: " . $_POST['carreras'] . "\n\n";
+
+
+// Ahora se envía el e-mail usando la función mail() de PHP
+$headers = 'From: '.$email_from."\r\n".
+$headers = 'Bcc: uninpahu@uninpahu.edu.co'."\r\n".
+'Reply-To: '.$email_from."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+@mail($email_to, $email_subject, $email_message, $headers);
+header ("Location: ../gracias.html");
+}
 ?>
-<?php 
