@@ -1,17 +1,17 @@
 <?php
-require 'PHPMailerAutoload.php';
+require("class.phpmailer.php");
 
 $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'mail.example.com';  // Specify main and backup SMTP servers
+$mail->Host = 'rsb25.rhostbh.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'uninpahu@uninpahu.edu.co';                 // SMTP username
+$mail->Username = 'gersonja@rsb25.rhostbh.com';                 // SMTP username
 $mail->Password = 'secret';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 110;                                    // TCP port to connect to
+$mail->Port = 465;                                    // TCP port to connect to
 
 $mail->From = 'uninpahu@uninpahu.edu.co';
 $mail->FromName = 'UNINPAHU';

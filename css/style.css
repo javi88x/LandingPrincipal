@@ -590,7 +590,7 @@ input.subscribe{
 }
 
 .subfooter{
-	background:#1B1464;
+	background:#383f45;
 	color:#fff;
 	text-align:center;
 	font-weight:12px;
@@ -1185,6 +1185,8 @@ footer{
 #accordion label {
   background: #BDC3C7;
   border-radius: .25em;
+  font-size: 15px;
+  font-weight: normal;
   cursor: pointer;
   display: block;
   margin-bottom: .325em;
