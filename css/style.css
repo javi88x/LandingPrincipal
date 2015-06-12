@@ -1172,6 +1172,9 @@ a.openpanel:active{
 a.btn-inscripcion{
 	color: #fff !important;
 }
+a.btn-inscripcion:hover{
+	background-color: #383f45 !important;
+}
 #home{
 	background-color: rgba(18, 22, 26, 0.85) !important;
 }
