@@ -17,12 +17,12 @@ if(!isset($_POST['nombre']) ||
 }
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'rsb25.rhostbh.com';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.office365.com  ';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'javier@gersonjaimes.com';                 // SMTP username
-$mail->Password = 'live6523018';                           // SMTP password
+$mail->Username = 'envios@uninpahu.edu.co';                 // SMTP username
+$mail->Password = 'Gaco5970';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 465;                                    // TCP port to connect to
+$mail->Port = 587;                                    // TCP port to connect to
 
 $mail->From = 'javier@gersonjaimes.com';
 $mail->FromName = 'Andres Degris';
