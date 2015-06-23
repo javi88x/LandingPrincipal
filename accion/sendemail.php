@@ -17,17 +17,17 @@ if(!isset($_POST['nombre']) ||
 }
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.office365.com  ';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.office365.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'envios@uninpahu.edu.co';                 // SMTP username
 $mail->Password = 'Gaco5970';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
-$mail->From = 'javier@gersonjaimes.com';
-$mail->FromName = 'Andres Degris';
+$mail->From = 'envios@uninpahu.edu.co';
+$mail->FromName = 'UNINPAHU Degris';
 $mail->addAddress('ingfranciscodonado@gmail.com', 'Francisco Donado');     // Add a recipient
-$mail->addAddress('ellen@example.com');               // Name is optional
+$mail->addAddress('handres@degrisdigital.com');               // Name is optional
 $mail->addReplyTo('info@example.com', 'Information');
 
 
