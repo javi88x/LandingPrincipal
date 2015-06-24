@@ -7,6 +7,7 @@ $mail = new PHPMailer;
 
 // Aquí se deberían validar los datos ingresados por el usuario
 if(!isset($_POST['nombre']) ||
+	!isset($_POST['identificacion']) ||
 	!isset($_POST['telefono']) ||
 	!isset($_POST['email']) ||
 	!isset($_POST['carreras'])){
@@ -37,6 +38,7 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 $mail->Subject = 'Informacion Landing Page';
 $mail->Body    .= "<b>Nombre:</b> " . $_POST['nombre'] . "\n";
+$mail->Body    .= "<b>Número de identificación:</b> " . $_POST['identificacion'] . "\n";
 $mail->Body    .= "<b>E-mail:</b> " . $_POST['email'] . "\n";
 $mail->Body    .= "<b>Teléfono:</b> " . $_POST['telefono'] . "\n";
 $mail->Body    .= "<b>Carrera de interes:</b> " . $_POST['carreras'] . "\n\n";
