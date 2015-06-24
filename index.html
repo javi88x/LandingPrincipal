@@ -96,10 +96,14 @@
 									<li>
 										<input class="form-control" type="text" name="nombre" data-rule="required" data-msg="Campo requerido" placeholder="Nombre completo" required />
 										<div class="validation"></div>
+									</li>
+									<li>
+										<input class="form-control label-number" type="texto" name="identificacion" data-rule="required" data-msg="Campo requerido" placeholder="Número de identificación" required />
+										<div class="validation"></div>
 									</li>	
 									<li>
 
-										<input class="form-control" type="text" name="telefono" placeholder="Teléfono" data-rule="required" data-msg="Campo requerido" required />
+										<input class="form-control label-number" type="text" name="telefono" placeholder="Teléfono" data-rule="required" data-msg="Campo requerido" required />
 										<div class="validation"></div>
 									</li>									
 									<li>
@@ -574,5 +578,12 @@
 	  ga('create', 'UA-26433603-2', 'auto');
 	  ga('send', 'pageview');
 	</script>
+    <script>
+        $(document).ready(function (){
+          $('.label-number').keyup(function (){
+            this.value = (this.value + '').replace(/[^0-9]/g, '');
+          });
+        });
+    </script>
   </body>
 </html>
