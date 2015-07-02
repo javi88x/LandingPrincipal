@@ -27,19 +27,14 @@ $mail->Port = 587;                                    // TCP port to connect to
 
 $mail->From = 'envios@uninpahu.edu.co';
 $mail->FromName = 'UNINPAHU Degris';
-<<<<<<< HEAD
 $mail->addAddress('handres@degrisdigital.com', 'Andres Degris');     // Add a recipient
-=======
-$mail->addAddress('handres@degrisdigital.com', 'UNINPAHU Degris');     // Add a recipient
->>>>>>> b629346cbfa2743531ed491435377a93318224b3
 $mail->addAddress('com@uninpahu.edu.co');               // Name is optional
-
 
 $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Informacion Landing Page';
+$mail->Subject = 'Informacion Landing Principal';
 $mail->Body    .= "<b>Nombre:</b> " . $_POST['nombre'] . "\n";
 $mail->Body    .= "<b>Identificación:</b> " . $_POST['identificacion'] . "\n";
 $mail->Body    .= "<b>E-mail:</b> " . $_POST['email'] . "\n";
