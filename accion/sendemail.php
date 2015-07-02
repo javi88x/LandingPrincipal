@@ -27,7 +27,11 @@ $mail->Port = 587;                                    // TCP port to connect to
 
 $mail->From = 'envios@uninpahu.edu.co';
 $mail->FromName = 'UNINPAHU Degris';
+<<<<<<< HEAD
 $mail->addAddress('handres@degrisdigital.com', 'Andres Degris');     // Add a recipient
+=======
+$mail->addAddress('handres@degrisdigital.com', 'UNINPAHU Degris');     // Add a recipient
+>>>>>>> b629346cbfa2743531ed491435377a93318224b3
 $mail->addAddress('com@uninpahu.edu.co');               // Name is optional
 
 
