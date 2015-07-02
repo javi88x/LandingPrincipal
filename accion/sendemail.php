@@ -3,7 +3,7 @@ require 'PHPMailerAutoload.php';
 
 $mail = new PHPMailer;
 
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+//$mail->SMTPDebug = 4;                               // Enable verbose debug output
 
 // Aquí se deberían validar los datos ingresados por el usuario
 if(!isset($_POST['nombre']) ||
@@ -27,9 +27,8 @@ $mail->Port = 587;                                    // TCP port to connect to
 
 $mail->From = 'envios@uninpahu.edu.co';
 $mail->FromName = 'UNINPAHU Degris';
-$mail->addAddress('ingfranciscodonado@gmail.com', 'Francisco Donado');     // Add a recipient
-$mail->addAddress('handres@degrisdigital.com');               // Name is optional
-$mail->addReplyTo('info@example.com', 'Information');
+$mail->addAddress('handres@degrisdigital.com', 'Andres Degris');     // Add a recipient
+$mail->addAddress('com@uninpahu.edu.co');               // Name is optional
 
 
 $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
@@ -38,7 +37,7 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 $mail->Subject = 'Informacion Landing Page';
 $mail->Body    .= "<b>Nombre:</b> " . $_POST['nombre'] . "\n";
-$mail->Body    .= "<b>Número de identificación:</b> " . $_POST['identificacion'] . "\n";
+$mail->Body    .= "<b>Identificación:</b> " . $_POST['identificacion'] . "\n";
 $mail->Body    .= "<b>E-mail:</b> " . $_POST['email'] . "\n";
 $mail->Body    .= "<b>Teléfono:</b> " . $_POST['telefono'] . "\n";
 $mail->Body    .= "<b>Carrera de interes:</b> " . $_POST['carreras'] . "\n\n";
